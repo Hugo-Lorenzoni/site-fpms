@@ -13,5 +13,14 @@
     "@astrojs/image": "^0.16.6",
     "astro": "^2.3.0",
     "sharp": "^0.31.0"
+  },
+  "overrides": {
+    "os": {
+      "linux": {
+        "dependencies": {
+          "esbuild-linux-64": "^0.15.18"
+        }
+      }
+    }
   }
 }
