@@ -1,0 +1,149 @@
+<header>
+  <nav>
+    <div class="home">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1653 1846"
+        width="40"
+        height="40"
+        preserveAspectRatio="xMidYMid meet"
+      >
+        <defs>
+          <style>
+            .cls-1 {
+              fill: #2e3192;
+            }
+            .cls-2 {
+              fill: #fff;
+            }
+          </style>
+        </defs>
+        <title>polytech</title><g id="Layer_4" data-name="Layer 4">
+          <path
+            class="cls-1"
+            d="M168,80V1526a262,262,0,0,0,262,262H862a138,138,0,0,1,138,138,138,138,0,0,1,138-138h421a262,262,0,0,0,262-262V80Z"
+            transform="translate(-168 -80)"></path>
+        </g>
+        <g id="Layer_3" data-name="Layer 3">
+          <path
+            class="cls-2"
+            d="M1107.17,1281.25a40,40,0,0,0,56.57,0l14.14-14.14a40,40,0,0,0,0-56.57l-102-102-70.71,70.71Z"
+            transform="translate(-168 -80)"></path>
+          <path
+            class="cls-2"
+            d="M734.6,590,620.78,476.22,442,655c17.71,17.63,27.71,43,25.77,71.9-2,29.42-15.93,56.8-36.78,77.09l44.83,44.83,99.46-99.46L722.13,896.21,763,795.69l-117-117Z"
+            transform="translate(-168 -80)"></path>
+          <path
+            class="cls-2"
+            d="M1124,897.8,811.24,1210.54a40,40,0,0,0,0,56.57l14.15,14.14a40,40,0,0,0,56.56,0L1175.7,987.5Z"
+            transform="translate(-168 -80)"></path>
+          <polygon
+            class="cls-2"
+            points="815.96 936.61 697.69 818.35 645.98 908.06 745.25 1007.32 815.96 936.61"
+          >
+          </polygon>
+          <path
+            class="cls-2"
+            d="M1101,526s-11-32-49-51a125,125,0,0,0-57-13,132.63,132.63,0,0,0-57,13c-36,17-49,51-49,51L471,1553,995,644l524,909Z"
+            transform="translate(-168 -80)"></path>
+          <path
+            class="cls-2"
+            d="M1559.14,898.22c-32.49-183.3-177.06-327.87-360.36-360.36l142.51,142.51L1226,795.69l40.91,100.52L1412,751.08Z"
+            transform="translate(-168 -80)"></path>
+        </g>
+      </svg>
+      <a href="/">Fédération des étudiants FPMs</a>
+    </div>
+    <ul>
+      <li><a href="/cercles">Cercles</a></li>
+      <li><a href="/houzeau">Houzeau</a></li>
+      <li><a href="/etudes-en-polytech">Études en Polytech</a></li>
+      <li><a href="/autres">Autres</a></li>
+    </ul>
+  </nav>
+</header>
+
+<style>
+  header {
+    background-color: var(--bg-light-color);
+    backdrop-filter: blur(5px);
+
+    position: sticky;
+    /*border-bottom: 2px solid var(--main-color);*/
+  }
+
+  nav {
+    font-size: 1rem;
+    font-weight: 700;
+
+    margin-inline: auto;
+    width: min(80rem, calc(100% - 3rem));
+    padding: 1rem 1.5rem;
+
+    display: flex;
+    justify-content: space-between;
+
+    gap: 2rem;
+    flex-wrap: wrap;
+    /* offset-x | offset-y | blur-radius | spread-radius | color */
+    /*box-shadow: 0em 0.1em 0.5em 0.1em var(--light-blue-color);*/
+  }
+
+  nav a {
+    text-decoration: none;
+    color: var(--main-color);
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    /*background-color: aqua;*/
+  }
+
+  nav ul li {
+    margin: auto;
+  }
+
+  nav ul li a {
+    padding: 0.1rem 0.3rem;
+    /*background-color: azure;*/
+    position: relative;
+  }
+
+  nav ul li a:after {
+    content: "";
+    position: absolute;
+    bottom: -0.15rem;
+    left: 0;
+    height: 0.2rem;
+    width: 0%;
+    background-color: var(--main-color);
+    border-radius: 1rem;
+    transition: width 0.5s;
+  }
+
+  nav ul li a:hover:after {
+    width: 100%;
+  }
+
+  .home {
+    text-decoration: none;
+    font-size: 1.25rem;
+    display: flex;
+    gap: 0.5rem;
+    /*background-color: aqua;*/
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    color: var(--main-color);
+    position: relative;
+    transition: opacity 0.5s;
+  }
+
+  .home:hover {
+    opacity: 65%;
+  }
+</style>
