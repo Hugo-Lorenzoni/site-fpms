@@ -33,12 +33,12 @@ const { title } = Astro.props;
 <style is:global>
   :root {
     --accent: 124, 58, 237;
-    --accent-gradient: linear-gradient(
+    /* --accent-gradient: linear-gradient(
       45deg,
       rgb(var(--accent)),
       #da62c4 30%,
       var(--bg-light-color) 60%
-    );
+    ); */
 
     --bg-hsl: 0, 0%, 96%;
     --bg-color: hsl(var(--bg-hsl), 1);
@@ -48,6 +48,18 @@ const { title } = Astro.props;
 
     --main-hsl: 238, 52%, 38%;
     --main-color: hsl(var(--main-hsl), 1);
+
+    --second-hsl: 238, 68%, 48%;
+    --second-color: hsl(var(--second-hsl), 1);
+
+    --accent-gradient: linear-gradient(
+      45deg,
+      var(--main-color),
+      var(--second-color) 30%,
+      var(--bg-light-color) 60%
+    );
+
+    scroll-behavior: smooth;
   }
   *,
   *::before,
@@ -68,7 +80,8 @@ const { title } = Astro.props;
     font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
       DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
   }
-  .wapper {
+  .wrapper {
     width: min(75rem, calc(100% - 3rem));
+    margin-inline: auto;
   }
 </style>
