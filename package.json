@@ -14,13 +14,7 @@
     "astro": "^2.3.0",
     "sharp": "^0.31.0"
   },
-  "overrides": {
-    "os": {
-      "linux": {
-        "dependencies": {
-          "esbuild-linux-64": "^0.15.18"
-        }
-      }
-    }
+  "optionalDependencies": {
+    "esbuild-linux-64": "^0.15.18"
   }
 }
