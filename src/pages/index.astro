@@ -20,42 +20,63 @@ import statueFPMs from "../images/statue-fpms.jpg";
     </h1>
   </section>
   <main>
-    <p class="instructions">
-      To get started, open the directory <code>src/pages</code> in your project.<br
-      />
-      <strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-    </p>
-    <ul role="list" class="link-card-grid">
-      <Card
-        href="https://docs.astro.build/"
-        title="Documentation"
-        body="Learn how Astro works and explore the official API docs."
-      />
-      <Card
-        href="https://astro.build/integrations/"
-        title="Integrations"
-        body="Supercharge your project with new frameworks and libraries."
-      />
-      <Card
-        href="https://astro.build/themes/"
-        title="Themes"
-        body="Explore a galaxy of community-built starter themes."
-      />
-      <Card
-        href="https://astro.build/chat/"
-        title="Community"
-        body="Come say hi to our amazing Discord community. ❤️"
-      />
-    </ul>
+    <section>
+      <div class="wrapper">
+        <div class="introduction">
+          <h2>Qu'est-ce que la Fédération des étudiants FPMs ?</h2>
+          <p>
+            La <strong>Fédération des étudiants FPMs</strong>
+            (aussi appelée <i>la Fédé</i>) est constituée de l'ensemble des
+            étudiants de la Faculté possédant la
+            <strong>Carte Fédé</strong>. Cette fédération est représentée par le
+            <strong>comité Fédé</strong> constitué de 5 togés et comprend de nombreux
+            <strong>Cercles</strong> aux activités très variées.
+          </p>
+          <p>
+            Elle a comme rôle de représenter les étudiants de la Polytech de
+            Mons dans le contexte académique et folklorique.
+          </p>
+        </div>
+      </div>
+    </section>
+    <div class="wrapper">
+      <p class="instructions">
+        To get started, open the directory <code>src/pages</code> in your project.<br
+        />
+        <strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
+      </p>
+      <ul role="list" class="link-card-grid">
+        <Card
+          href="https://docs.astro.build/"
+          title="Documentation"
+          body="Learn how Astro works and explore the official API docs."
+        />
+        <Card
+          href="https://astro.build/integrations/"
+          title="Integrations"
+          body="Supercharge your project with new frameworks and libraries."
+        />
+        <Card
+          href="https://astro.build/themes/"
+          title="Themes"
+          body="Explore a galaxy of community-built starter themes."
+        />
+        <Card
+          href="https://astro.build/chat/"
+          title="Community"
+          body="Come say hi to our amazing Discord community. ❤️"
+        />
+      </ul>
+    </div>
   </main>
 </Layout>
 
 <style>
-  main {
+  /* main {
     margin: auto;
     padding: 1.5rem;
     max-width: 60ch;
-  }
+  } */
   h1 {
     font-size: 2.5rem;
     font-weight: 800;
@@ -72,6 +93,31 @@ import statueFPMs from "../images/statue-fpms.jpg";
     /* offset-x | offset-y | blur-radius | color */
     text-shadow: 2px 1px 10px black;
   }
+  .hero {
+    width: 100%;
+    height: calc(100dvh - 4.5rem);
+    overflow: hidden;
+    display: flex;
+    box-shadow: inset 0 0 500px black;
+  }
+  .hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+  .introduction {
+    border: 1px solid var(--main-color);
+    background-color: white;
+    padding: 1.5rem 2rem;
+    border-radius: 2rem;
+  }
+  .introduction h2 {
+    margin-top: 0;
+  }
+  .introduction p {
+    margin-bottom: 0;
+  }
   .text-gradient {
     background-image: var(--accent-gradient);
     -webkit-background-clip: text;
@@ -83,6 +129,7 @@ import statueFPMs from "../images/statue-fpms.jpg";
     /* offset-x | offset-y | blur-radius | color */
     filter: drop-shadow(0px 0px 5px white) drop-shadow(2px 1px 10px white);
   }
+  ////////////////////////////////////////////////////////////////////////////////////
   .instructions {
     line-height: 1.6;
     margin: 1rem 0;
@@ -107,20 +154,5 @@ import statueFPMs from "../images/statue-fpms.jpg";
     grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
     gap: 1rem;
     padding: 0;
-  }
-
-  .hero {
-    width: 100%;
-    height: calc(100dvh - 4.5rem);
-    overflow: hidden;
-    display: flex;
-    box-shadow: inset 0 0 500px black;
-  }
-
-  .hero img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
   }
 </style>
