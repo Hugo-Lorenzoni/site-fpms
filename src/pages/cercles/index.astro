@@ -11,23 +11,22 @@ const promo = 185;
     <section>
       <h2>Cercles fédérés</h2>
       <ul>
+        <Card title="Bar" promo={promo} hrefPage="bar" />
+        <Card
+          title="CAP - Centrale d'Achat Polytech"
+          promo={promo}
+          hrefPage="CAP"
+        />
         <Card title="Cercle Magellan" promo={promo} hrefPage="magellan" />
-        <li>
-          <a href=`/cercles/${promo}/bar`>Bar</a>
-        </li>
-        <li>
-          <a href=`/cercles/${promo}/bar`>CAP - Centrale d'Achat Polytech</a>
-        </li>
-        <li><a href=`/cercles/${promo}/magellan`>Cercle Magellan</a></li>
-        <li><a href=`/cercles/${promo}/mons-mines`>Mons-Mines</a></li>
-        <li><a href=`/cercles/${promo}/mutu`>Mutuelle d'Édition</a></li>
-        <li><a href=`/cercles/${promo}/peyresq`>Peyresq</a></li>
-        <li><a href=`/cercles/${promo}/CPV`>CPV - Cercle Photo Vidéo</a></li>
-        <li><a href=`/cercles/${promo}/radio-extra`>Radio Extra</a></li>
-        <li><a href=`/cercles/${promo}/scientifique`>Scientifique</a></li>
-        <li><a href=`/cercles/${promo}/SDM`>Sono-Danse-Musique</a></li>
-        <li><a href=`/cercles/${promo}/Q`>Q - Cercle Culturel</a></li>
-        <li><a href=`/cercles/${promo}/sports`>Cercle des Sports</a></li>
+        <Card title="Mons-Mines" promo={promo} hrefPage="mons-mines" />
+        <Card title="Mutuelle d'Édition" promo={promo} hrefPage="mutu" />
+        <Card title="Peyresq" promo={promo} hrefPage="peyresq" />
+        <Card title="CPV - Cercle Photo Vidéo" promo={promo} hrefPage="CPV" />
+        <Card title="Radio Extra" promo={promo} hrefPage="radio-extra" />
+        <Card title="Scientifique" promo={promo} hrefPage="scientifique" />
+        <Card title="Sono-Danse-Musique" promo={promo} hrefPage="SDM" />
+        <Card title="Q - Cercle Culturel" promo={promo} hrefPage="Q" />
+        <Card title="Cercle des Sports" promo={promo} hrefPage="sports" />
       </ul>
     </section>
     <section>
@@ -45,3 +44,12 @@ const promo = 185;
     </section>
   </div>
 </Layout>
+
+<style>
+  ul {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+</style>
