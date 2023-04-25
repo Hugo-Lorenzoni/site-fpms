@@ -5,9 +5,10 @@ export interface Props {
   title: string;
   promo: number;
   hrefPage: string;
+  customColor: string;
 }
 
-const { title, promo, hrefPage } = Astro.props;
+const { title, promo, hrefPage, customColor } = Astro.props;
 ---
 
 <li>
@@ -23,8 +24,38 @@ const { title, promo, hrefPage } = Astro.props;
   </a>
 </li>
 
-<style>
+<style define:vars={{ customColor }}>
+  li {
+    flex-grow: 1;
+  }
   h3 {
     position: absolute;
+    /* top right bottom left */
+    inset: auto 0 0 0;
+    margin: 1rem 1.5rem;
+    color: var(--bg-light-color);
+  }
+  a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    border-radius: 2rem;
+    display: flex;
+    /* inset | offset-x | offset-y | blur-radius | spread-radius | color */
+    box-shadow: inset 0rem -9rem 6rem -6rem black;
+    border: 5px solid var(--bg-color);
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  a:hover {
+    border: 5px solid var(--customColor);
+    box-shadow: inset 0rem -10rem 6rem -6rem black;
+  }
+  a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
   }
 </style>
