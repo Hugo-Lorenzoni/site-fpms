@@ -1,5 +1,47 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import Card from "../../components/Card.astro";
+
+const promo = 185;
 ---
 
-<Layout title="Cercles">Page des Cercles</Layout>
+<Layout title="Cercles">
+  <div class="wrapper">
+    <h1>Cercles FPMs</h1>
+    <section>
+      <h2>Cercles fédérés</h2>
+      <ul>
+        <Card title="Cercle Magellan" promo={promo} hrefPage="magellan" />
+        <li>
+          <a href=`/cercles/${promo}/bar`>Bar</a>
+        </li>
+        <li>
+          <a href=`/cercles/${promo}/bar`>CAP - Centrale d'Achat Polytech</a>
+        </li>
+        <li><a href=`/cercles/${promo}/magellan`>Cercle Magellan</a></li>
+        <li><a href=`/cercles/${promo}/mons-mines`>Mons-Mines</a></li>
+        <li><a href=`/cercles/${promo}/mutu`>Mutuelle d'Édition</a></li>
+        <li><a href=`/cercles/${promo}/peyresq`>Peyresq</a></li>
+        <li><a href=`/cercles/${promo}/CPV`>CPV - Cercle Photo Vidéo</a></li>
+        <li><a href=`/cercles/${promo}/radio-extra`>Radio Extra</a></li>
+        <li><a href=`/cercles/${promo}/scientifique`>Scientifique</a></li>
+        <li><a href=`/cercles/${promo}/SDM`>Sono-Danse-Musique</a></li>
+        <li><a href=`/cercles/${promo}/Q`>Q - Cercle Culturel</a></li>
+        <li><a href=`/cercles/${promo}/sports`>Cercle des Sports</a></li>
+      </ul>
+    </section>
+    <section>
+      <h2>Cercle des Fêtes</h2>
+      <p></p>
+    </section>
+    <section>
+      <h2>Régionales</h2>
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </section>
+  </div>
+</Layout>

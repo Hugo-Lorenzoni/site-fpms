@@ -1,0 +1,35 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+
+const cercle = "Magellan";
+const description = "";
+const presi = "Kevin Dubrule";
+const treso = "";
+const secretaire = "";
+---
+
+<Layout title={cercle}>
+  <div class="wrapper">
+    <h1>{cercle}</h1>
+    <section>
+      <h2>Description</h2>
+      <p>{description}</p>
+    </section>
+    <section>
+      <h2>Comité</h2>
+      <ul>
+        <li>{presi}</li>
+        <li>{treso}</li>
+        <li>{secretaire}</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Réseaux sociaux</h2>
+      <ul>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+      </ul>
+    </section>
+  </div>
+</Layout>
+<style></style>
