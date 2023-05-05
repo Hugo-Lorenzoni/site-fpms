@@ -22,6 +22,7 @@ const promo = 185;
       quality={30}
       width={1920}
       aspectRatio={3 / 2}
+      format="webp"
     />
     <h1>
       Bienvenue sur le site de la
@@ -54,6 +55,8 @@ const promo = 185;
             alt=`Comité Fédé ${promo}`
             quality={50}
             width={800}
+            loading="lazy"
+            format="webp"
           />
           <ul>
             <li><h3>Président</h3><p>{presi}</p></li>
