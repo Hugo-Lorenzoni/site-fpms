@@ -1,0 +1,34 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+
+const cercle = "CAP";
+const description = "";
+const presi = "Florian Druart";
+const treso = "Kateline Malray";
+---
+
+<Layout title={cercle}>
+  <main class="wrapper">
+    <h1>{cercle}</h1>
+    <section>
+      <h2>Description</h2>
+      <p>{description}</p>
+    </section>
+    <section>
+      <h2>Comité</h2>
+      <ul>
+        <li>{presi}</li>
+        <li>{treso}</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Réseaux sociaux</h2>
+      <ul>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+      </ul>
+    </section>
+    <a href="">Anciens comités</a>
+  </main>
+</Layout>
+<style></style>

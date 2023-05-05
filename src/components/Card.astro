@@ -1,64 +1,61 @@
 ---
+import { Image } from "@astrojs/image/components";
+
 export interface Props {
   title: string;
-  body: string;
-  href: string;
+  promo: number;
+  hrefPage: string;
+  customColor: string;
 }
 
-const { href, title, body } = Astro.props;
+const { title, promo, hrefPage, customColor } = Astro.props;
 ---
 
-<li class="link-card">
-  <a href={href}>
-    <h2>
-      {title}
-      <span>&rarr;</span>
-    </h2>
-    <p>
-      {body}
-    </p>
+<li>
+  <a href=`/cercles/${promo}/${hrefPage}`>
+    <h3>{title}</h3>
+    <Image
+      src={import(`../images/${hrefPage}.jpg`)}
+      alt={title}
+      quality={30}
+      width={300}
+      aspectRatio={3 / 2}
+    />
   </a>
 </li>
-<style>
-  .link-card {
-    list-style: none;
-    display: flex;
-    padding: 0.25rem;
-    background-color: var(--bg-light-color);
-    background-image: none;
-    background-size: 400%;
-    border-radius: 0.6rem;
-    background-position: 100%;
-    transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-      0 2px 4px -2px rgba(0, 0, 0, 0.1);
-  }
 
-  .link-card > a {
+<style define:vars={{ customColor }}>
+  li {
+    flex-grow: 1;
+  }
+  h3 {
+    position: absolute;
+    /* top right bottom left */
+    inset: auto 0 0 0;
+    margin: 1rem 1.5rem;
+    color: var(--bg-light-color);
+  }
+  a {
+    display: block;
     width: 100%;
-    text-decoration: none;
-    line-height: 1.4;
-    padding: 1rem 1.3rem;
-    border-radius: 0.35rem;
-    color: #111;
-    background-color: var(--bg-light-color);
-    opacity: 0.8;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    border-radius: 1.5rem;
+    display: flex;
+    /* inset | offset-x | offset-y | blur-radius | spread-radius | color */
+    box-shadow: inset 0rem -9rem 6rem -6rem black;
+    border: 5px solid var(--bg-color);
+    transition: box-shadow 0.3s ease-in-out;
   }
-  h2 {
-    margin: 0;
-    font-size: 1.25rem;
-    transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  a:hover {
+    border: 5px solid var(--customColor);
+    box-shadow: inset 0rem -10rem 6rem -6rem black;
   }
-  p {
-    margin-top: 0.5rem;
-    margin-bottom: 0;
-    color: #444;
-  }
-  .link-card:is(:hover, :focus-within) {
-    background-position: 0;
-    background-image: var(--accent-gradient);
-  }
-  .link-card:is(:hover, :focus-within) h2 {
-    color: rgb(var(--accent));
+  a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
   }
 </style>

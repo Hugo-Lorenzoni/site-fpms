@@ -1,5 +1,106 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import Card from "../../components/Card.astro";
+
+const promo = 185;
 ---
 
-<Layout title="Cercles">Page des Cercles</Layout>
+<Layout title="Cercles">
+  <main class="wrapper">
+    <h1>Cercles FPMs</h1>
+    <section>
+      <h2>Cercles fédérés</h2>
+      <ul>
+        <Card title="Bar" promo={promo} hrefPage="bar" customColor="#c70015" />
+        <Card
+          title="CAP - Centrale d'Achat Polytech"
+          promo={promo}
+          hrefPage="CAP"
+          customColor="#fff"
+        />
+        <Card
+          title="Cercle Magellan"
+          promo={promo}
+          hrefPage="magellan"
+          customColor="#42E1DD"
+        />
+        <Card
+          title="Mons-Mines"
+          promo={promo}
+          hrefPage="mons-mines"
+          customColor="#7a000c"
+        />
+        <Card
+          title="Mutuelle d'Édition"
+          promo={promo}
+          hrefPage="mutu"
+          customColor="#7f00ff"
+        />
+        <Card
+          title="Peyresq"
+          promo={promo}
+          hrefPage="peyresq"
+          customColor="#feed02"
+        />
+        <Card
+          title="CPV - Cercle Photo Vidéo"
+          promo={promo}
+          hrefPage="CPV"
+          customColor="#ff6600"
+        />
+        <Card
+          title="Radio Extra"
+          promo={promo}
+          hrefPage="radio-extra"
+          customColor="#56d84c"
+        />
+        <Card
+          title="Scientifique"
+          promo={promo}
+          hrefPage="scientifique"
+          customColor="#000000"
+        />
+        <Card
+          title="Sono-Danse-Musique"
+          promo={promo}
+          hrefPage="SDM"
+          customColor="#092d81"
+        />
+        <Card
+          title="Q - Cercle Culturel"
+          promo={promo}
+          hrefPage="Q"
+          customColor="#000000"
+        />
+        <Card
+          title="Cercle des Sports"
+          promo={promo}
+          hrefPage="sports"
+          customColor="#bbe5fb"
+        />
+      </ul>
+    </section>
+    <section>
+      <h2>Cercle des Fêtes</h2>
+      <p></p>
+    </section>
+    <section>
+      <h2>Régionales</h2>
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  ul {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+</style>
