@@ -1,0 +1,79 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import { Image } from "@astrojs/image/components";
+import { h } from "astro";
+const cercle = "Sono, Dance et Musique ";
+const description = `
+Dans cette énorme symphonie qu'est la vie, te voilà arrivé dans une nouvelle ère ! 
+Installe-toi confortablement, pose ton casque sur tes oreilles et laisse-toi bercer par le rythme des syllabi, des cours et... de la vie étudiante ! 
+Tu t'apprêtes maintenant à vivre au sein de notre Faculté ce qui seront probablement les années les plus riches de ta vie, 
+et elles pourront vibrer au rythme de la musique si tu désires approcher le Cercle Sono-Danse-Musique. 
+
+<br><br/> 
+Comme tu t'en doutes probablement, l'activité principale de notre Cercle (plus communément appelé " La Sono ") a pour mission principale l'animation musicale des différentes 
+activités étudiantes, telles que les soirées, soupers ou autres. Comme son nom l'indique, 
+le Cercle ne s'occupe pas uniquement de l'aspect sono et rassemble danseurs et musiciens autour de leur passion à plusieurs reprises durant l'année 
+afin de mettre en place chorégraphies et concerts qui se déroulent devant un public. 
+
+<br><br/>
+Parallèlement à la vie de la Faculté, les membres du comité animent également des soirées privées. Que ce soit pour un anniversaire, un mariage ou encore une soirée, 
+tu peux faire appel à nous ! Nous viendrons avec plaisir animer l'évènement en suivant tes critères musicaux si tu en as. 
+Le Cercle possède tout le matériel nécessaire à la sonorisation de ce genre d'évènements et ce, à des prix vraiment intéressants  
+
+<br><br/>
+Alors, si le monde de la musique t'intéresse ou si tu souhaites t'en approcher, tu auras de nombreuses occasions de t'y investir et le Cercle t'ouvrira chaleureusement les bras ! 
+Si tu as des questions ou besoin de renseignements, 
+tu peux nous contacter via notre page Facebook ou encore notre compte Instagram « Sono-Dance-Musique ». A bientôt !
+
+`;
+
+const presi = "Joséphine Vincart";
+const treso = "Chloé Pierart";
+const ds = "Cyril De Marez";
+const dd = "Colleen Manteau";
+const dm = "Mathis Lete";
+---
+
+<Layout title={cercle}>
+    <main class="wrapper">
+        <h1>{cercle}</h1>
+        <section>
+            <h2>Description</h2>
+            <p>
+                <div set:html={description} />
+            </p>
+        </section>
+        <section>
+            <h2>Comité</h2>
+            <ul>
+                <li>{presi}</li>
+                <li>{treso}</li>
+                <li>{ds}</li>
+                <li>{dd}</li>
+                <li>{dm}</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Réseaux sociaux</h2>
+            <ul>
+                <li>
+                    <a class="iglink" target="_blank" href=""></a>
+                </li>
+            </ul>
+            <!--<a href="">Anciens comités</a>-->
+        </section>
+    </main>
+    <style>
+        ul {
+            padding: 0;
+            list-style: none;
+        }
+
+        li {
+            margin-bottom: 10px; /* Adjust as needed */
+        }
+        .wrapper {
+            margin-bottom: 20px;
+        }
+    </style>
+</Layout>

@@ -1,0 +1,65 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+
+const cercle = "La Mutuelle d'Édition";
+const description = `
+La Mutuelle des Etudiants de la Faculté Polytechnique de Mons (plus communément appelée la Mutu) est un Cercle géré par les étudiants pour les étudiants. 
+
+<br><br/>
+La Mutu possède et gère un local situé à l’arrière de la Cité Houzeau (Rue de la Tannerie, N°12).
+<br><br/>
+
+Ce local abrite du matériel d'impression professionnel qui permet aux étudiants d'imprimer et de relier tout ce qu'ils souhaitent aux meilleurs prix. 
+Des supports de cours divers aux synthèses en passant par les stickers, la Mutu et son comité armé d'une équipe d'ouvreurs se feront le plaisir de te servir pendant 
+les heures d'ouvertures en fin de journée et sur le temps de midi tout au long de la semaine et ce dans une bonne ambiance ! 
+Si tu n'es pas disponible sur les heures d'ouverture, il est possible de faire une commande par mail ou par Messenger et de venir la retirer au moment qui te convient le mieux. 
+La Mutu collabore aussi étroitement avec les Presses Universitaires Montoises (PUM's) et propose ainsi également la vente de syllabi Polytech.
+<br><br/>
+
+Mais ce n'est pas tout ! La Mutu possède aussi une salle d'étude au rez-de-chaussée de son local proposant aux étudiants Polytech 
+un endroit calme à deux pas des kots de la Cité Houzeau où étudier et collaborer entre camarades avec des horaires d'accès souples.
+`;
+const presi = "Louis Roost";
+const treso = "Louis Pluquet";
+const secretaire = "  Hugo Dantinne";
+---
+
+<Layout title={cercle}>
+    <main class="wrapper">
+        <h1>{cercle}</h1>
+        <section>
+            <h2>Description</h2>
+            <div set:html={description} />
+        </section>
+        <section>
+            <h2>Comité</h2>
+            <ul>
+                <li>{presi}</li>
+                <li>{treso}</li>
+                <li>{secretaire}</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Réseaux sociaux</h2>
+            <ul>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+            </ul>
+        </section>
+        <a href="">Anciens comités</a>
+    </main>
+</Layout>
+
+<style>
+    ul {
+        padding: 0;
+        list-style: none;
+    }
+
+    li {
+        margin-bottom: 10px; /* Adjust as needed */
+    }
+    .wrapper {
+        margin-bottom: 20px;
+    }
+</style>

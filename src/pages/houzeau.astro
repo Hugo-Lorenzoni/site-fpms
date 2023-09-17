@@ -1,7 +1,121 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { Image } from "@astrojs/image/components";
+import CardAstro from "../components/CardAstro.astro";
+import houzeau from "../images/houzeau.jpg";
 ---
 
 <Layout title="Houzeau">
-  <main class="wrapper">Page Houzeau</main>
+  <main class="wrapper">
+    <section class="hero">
+      <Image
+        src={houzeau}
+        alt="La cité houzeau"
+        quality={100}
+        width={1920}
+        height={1280}
+        format="jpg"
+      />
+      <h1>
+        La Cité Houzeau est le <span class="text-gradient"
+          >centre névralgique de la vie étudiante Polytech.</span
+        >
+        Chaque jour, des centaines d’étudiants Polytech s’y rencontrent ou y participent
+        à des activités. En plus du restaurant universitaire Houzeau, on y retrouve
+        tous les locaux gérés par les différents Cercles dont la liste est reprise
+        ci-dessous :
+      </h1>
+    </section>
+    <section class="introduction">
+      <p>
+        <ul>
+          <li>La Salle PP</li>
+          <li>La CAP</li>
+          <li>Le Bar</li>
+          <li>La Mutu</li>
+          <li>Le 400 - La Radio</li>
+          <li>Le 500 - Le Magellan</li>
+          <li>Le 700</li>
+          <li>Le 800 - Salle de sports</li>
+          <li>Le 9/10 - Local de projection</li>
+          <li>Le 1100 - Commission historique</li>
+          <li>La 11/12 - Bibli</li>
+        </ul>
+      </p>
+    </section>
+  </main>
 </Layout>
+
+<style>
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    color: var(--bg-light-color);
+    position: absolute;
+    height: max-content;
+
+    width: min(46ch, calc(100% - 3rem));
+    margin-inline: auto;
+    margin-top: auto;
+    margin-bottom: 10rem;
+    inset: 0;
+    /* offset-x | offset-y | blur-radius | color */
+    text-shadow: 2px 1px 10px black;
+  }
+  .hero {
+    width: 100%;
+    height: calc(100dvh - 4.5rem);
+    overflow: hidden;
+    display: flex;
+    box-shadow: inset 0 0 500px black;
+  }
+  .hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+  p {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    color: var(--bg-light-color);
+    position: absolute;
+    height: max-content;
+
+    width: min(29ch, calc(100% - 3rem));
+    margin-inline: auto;
+    margin-top: auto;
+    margin-bottom: 5rem;
+    inset: 0;
+    /* offset-x | offset-y | blur-radius | color */
+    text-shadow: 2px 1px 10px black;
+  }
+  .introduction p {
+    margin-bottom: 1rem;
+  }
+  .introduction ul {
+    list-style-type: disc; /* Use 'disc' for filled circles or 'circle' for unfilled circles */
+    padding: 0;
+    margin: 0;
+  }
+  .introduction {
+    border: 1px solid var(--main-color);
+    background-color: white;
+    padding: 1.5rem 2rem;
+    border-radius: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .text-gradient {
+    background-image: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400%;
+    background-position: 0%;
+    text-shadow: none;
+    /* offset-x | offset-y | blur-radius | color */
+    filter: drop-shadow(0px 0px 5px white) drop-shadow(2px 1px 10px white);
+  }
+</style>
