@@ -1,0 +1,70 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+
+const cercle = "Le Mons-Mines";
+const description = `
+
+« Coucou, ici le Mons-Mines. Votre seule et unique source d’information sur la vie des étudiants de Mons. 
+<br/>
+Qui a dit quoi ? Qui a fait quoi ? Que s’est-il passé dans cette bonne ville de Mons ? 
+<br/>
+Ça ce sont des secrets que vous retrouverez uniquement dans ce journal de la Faculté. 
+<br/>
+Bisous bisous, le Mons-Mines. » 
+
+<br><br/>
+
+Le Mons-Mines, ce fabuleux Cercle qui vous propose quatre journaux satiriques par an reprenant articles, anecdotes, … 
+tout ce qu’il s’est passé dans notre Faculté et que vous avez sans doute raté. 
+Ce journal est entièrement rédigé, conçu et géré par des étudiants qui perceront à jour vos plus grands secrets. 
+Ce précieux trésor attire à sa sortie des foules d’étudiants désireux de connaître ce que les oreilles baladeuses du Mons-Mines ont entendu. 
+On peut faire un petit tour dans les entendus pour voir qui a dit quoi sur qui ou on peut aussi jeter un coup d’œil à l’indétrônable Tournez-Manège pour découvrir tous les potins de la Faculté. 
+Bien d’autres choses sont encore à découvrir dans cette merveille de papier. 
+Si ta plume te démange, nous serons ravis que tu nous envoies un de tes articles, des potins, des entendus, … et ainsi contribuer à la confection de ce magnifique journal !
+`;
+const presi = "Philippe Asvestaris";
+const rec = "Arno Panarisi";
+const treso = "Romane Sogalow";
+const secretaire = " Léa Robinet";
+---
+
+<Layout title={cercle}>
+    <main class="wrapper">
+        <h1>{cercle}</h1>
+        <section>
+            <h2>Description</h2>
+            <div set:html={description} />
+        </section>
+        <section>
+            <h2>Comité</h2>
+            <ul>
+                <li>{presi}</li>
+                <li>{rec}</li>
+                <li>{treso}</li>
+                <li>{secretaire}</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Réseaux sociaux</h2>
+            <ul>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+            </ul>
+        </section>
+        <a href="">Anciens comités</a>
+    </main>
+</Layout>
+
+<style>
+    ul {
+        padding: 0;
+        list-style: none;
+    }
+
+    li {
+        margin-bottom: 10px; /* Adjust as needed */
+    }
+    .wrapper {
+        margin-bottom: 20px;
+    }
+</style>

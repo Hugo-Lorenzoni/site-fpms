@@ -1,8 +1,31 @@
 ---
 import Layout from "../../../layouts/Layout.astro";
-
+import { Image } from "@astrojs/image/components";
+import { h } from "astro";
 const cercle = "CAP";
-const description = "";
+const description = `
+La Centrale d'Achat Polytechnique ou CAP pour les intimes est un des 12
+Cercles Fédérés de notre Faculté. Ce dernier dispose d’un local situé à
+la Cité Houzeau juste à côté du Bar Polytech. Ce local est ouvert à tous
+du lundi au vendredi de 12h30 à 13h15. C’est un lieu de convivialité
+mais pas que … <br /><br />
+En effet, la CAP a plusieurs missions toutes liées
+à la mise à disposition de services pour la communauté estudiantine.
+Tout d’abord, une machine à café ainsi que des glaces vous y sont
+proposées pour un prix des plus démocratique. De plus, la CAP vend du
+matériel utile à votre parcours universitaire tel que les fameux
+tabliers de chimie mais aussi des fournitures (crayons, bics, équerres,
+…). L’attirail du parfait baptisé est également disponible au sein de la
+CAP : pennes, tablars vierges et insignes.<br /><br />
+Nous ne le répéterons jamais assez mais ce Cercle comme d’autres est
+au service de tous. Les canapés de notre local seront ravis de voir
+tout le monde venir s’y prélasser. On espère donc vous y retrouver
+rapidement ! Si vous avez des questions ou tout simplement besoin de
+renseignements, n’hésitez pas à passer sur les temps de midi. On sera
+ravis de vous aider.<br /><br />
+PS : A la CAP, il fait bon vivre !
+`;
+
 const presi = "Florian Druart";
 const treso = "Kateline Malray";
 ---
@@ -12,7 +35,9 @@ const treso = "Kateline Malray";
     <h1>{cercle}</h1>
     <section>
       <h2>Description</h2>
-      <p>{description}</p>
+      <p>
+        <div set:html={description} />
+      </p>
     </section>
     <section>
       <h2>Comité</h2>
@@ -31,4 +56,16 @@ const treso = "Kateline Malray";
     <a href="">Anciens comités</a>
   </main>
 </Layout>
-<style></style>
+<style>
+  ul {
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    margin-bottom: 10px; /* Adjust as needed */
+  }
+  .wrapper {
+    margin-bottom: 20px;
+  }
+</style>
