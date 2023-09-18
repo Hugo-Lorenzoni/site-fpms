@@ -1,0 +1,108 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import { Image } from "@astrojs/image/components";
+const cercle = "Le Chant de la Fac";
+const description = `
+
+Air : Le Chant des Chasseurs Ardennais
+<br></br>
+<br></br>
+En notre Wallonie, il est une Faculté,
+<br></br>
+Où l'on n’craint pas la vie de l'étudiant guinzé. 
+<br></br>
+Quand dans la guindaille, parmi les futailles, 
+<br></br>
+La Polytech de Mons est là, on ne nous ignore pas. 
+<br></br>
+Et aux p’tites heures du matin, 
+<br></br>
+Quand tous les gamins sont morts pleins,
+<br></br> 
+La Polytech de Mons tient le coup et on reste debout. 
+<br></br>
+On nous a dit : les études que vous faites,
+<br></br>
+Sont pas faciles, il faudra travailler.
+<br></br>
+Vous ne serez pas toujours à la fête,
+<br></br>
+Si vous ne voulez pas vous faire péter. 
+<br></br>
+Mais pour un étudiant, c'est pas une vie, 
+<br></br>
+Que de bloquer sans cesse et sans arrêt. 
+<br></br>
+[J'm'en fous, j'suis en Polytechnique, 
+<br></br>
+Pour m'amuser, pour boire et guindailler] Bis
+<br></br>
+<br></br>
+Et quand nous nous éveillons, midi sonne,
+<br></br>
+II est trop tard, encore trois cours brossés.
+<br></br> 
+Aucun regret, la bière est toujours bonne,
+<br></br>
+Et nous attend au Bar de la Cité.
+<br></br>
+Agités par un réflexe éthylique, 
+<br></br>
+On se lève et on va la déguster,
+<br></br>
+[On est entrés à la Polytechnique,
+<br></br>
+Pour s'amuser, pour boire et guindailler] Bis
+<br></br>
+<br></br>
+
+Et quand nous sortirons de notre rêve 
+<br></br>
+Une triste vie pour nous va commencer : 
+<br></br>
+La femme, les gosses et puis enfin la crève,
+<br></br>
+Ne cesserons pas de nous emmerder. 
+<br></br>
+Profitons-en, le temps passe si vite,
+<br></br>
+On n’meurt qu'une fois, c'est là la vérité. 
+<br></br>
+[On est rentrés à la Polytechnique,
+<br></br>
+Pour s'amuser, pour boire et guindailler] Bis
+<br></br>
+<br></br>
+
+
+`;
+
+
+--- 
+
+<Layout title={cercle}>
+    <main class="wrapper">
+        <h1>{cercle}</h1>
+        <section>
+            <h2>Description</h2>
+            <p>
+                <div set:html={description} />
+            </p>
+        </section>
+       
+        <!--<a href="">Anciens comités</a>-->
+    </main>
+</Layout>
+<style>
+    ul {
+        padding: 0;
+        list-style: none;
+    }
+
+    li {
+        margin-bottom: 10px; /* Adjust as needed */
+    }
+    .wrapper {
+        margin-bottom: 20px;
+    }
+</style>

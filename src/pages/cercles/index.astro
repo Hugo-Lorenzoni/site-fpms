@@ -5,11 +5,11 @@ import Card from "../../components/Card.astro";
 const promo = 185;
 ---
 
-<Layout title="Cercles">
+<Layout title="Les Cercles">
   <main class="wrapper">
     <h1>Cercles FPMs</h1>
     <section>
-      <h2>Cercles fédérés</h2>
+      <h2>Les Cercles Fédérés</h2>
       <ul>
         <Card title="Bar" promo={promo} hrefPage="bar" customColor="#c70015" />
         <Card
@@ -80,14 +80,11 @@ const promo = 185;
         />
       </ul>
     </section>
+ 
     <section>
-      <h2>Cercle des Fêtes</h2>
-      <p></p>
-    </section>
-    <section>
-      <h2>Régionales</h2>
+      <h2>Les Régionales</h2>
       <ul>
-        <!---
+      
        <Card
           title="La Carolo"
           promo={promo}
@@ -109,14 +106,11 @@ const promo = 185;
         <Card
           title="La Boraine"
           promo={promo}
-          hrefPage="borain"
+          hrefPage="boraine"
           customColor="#ff0000"
         />
-      -->
-        <li>Carolo</li>
-        <li>Frontalière</li>
-        <li>Centrale</li>
-        <li>Boraine</li>
+    
+  
       </ul>
     </section>
   </main>
