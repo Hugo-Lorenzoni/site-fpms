@@ -1,0 +1,63 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+
+const cercle = "Le Scientifque";
+const description = `
+On dit souvent qu’un ingénieur civil ne sait pas utiliser ses dix doigts et encore moins planter des clous... Le Cercle Scientifique est là pour y remédier ! 
+
+<br><br/>
+Le Cercle Scientifique est premièrement un Cercle tourné vers l’aide aux étudiants et aux autres Cercles de la Faculté. 
+Comment peut-il vous aider ? Que cela soit pour des petites réparations dans votre kot comme un problème d’armoire ou encore un souci de fenêtre, 
+le Cercle Scientifique est disponible tout au long de l’année pour vous venir en aide !
+<br><br/>
+
+Le Scientifique est aussi le Cercle qui peut vous prêter gratuitement du matériel de bricolage de bonne qualité 
+(tel que des visseuses, scies sauteuses, marteaux, pieds-de-biche, etc…) pour vos projets académiques ou personnels.
+
+<br><br/>
+
+Le Cercle Scientifique est également le Cercle qui s’implique dans deux des trois méchouis annuels et qui organise chaque année depuis 10 ans maintenant la BGT (Big Guinze Theory) avec l’aide du Cercle Radio Extra et du Cercle Magellan. 
+Son plus grand projet annuel reste la construction du char qui défile fièrement dans les rues de Mons depuis plus de 50 ans lors du cortège des étudiants le jour du Baptême !
+`;
+const presi = "Nathan Marcus";
+const secretaire = "Audran Duquène";
+---
+
+<Layout title={cercle}>
+    <main class="wrapper">
+        <h1>{cercle}</h1>
+        <section>
+            <h2>Description</h2>
+            <div set:html={description} />
+        </section>
+        <section>
+            <h2>Comité</h2>
+            <ul>
+                <li>{presi}</li>
+                <li>{secretaire}</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Réseaux sociaux</h2>
+            <ul>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+            </ul>
+        </section>
+        <a href="">Anciens comités</a>
+    </main>
+</Layout>
+
+<style>
+    ul {
+        padding: 0;
+        list-style: none;
+    }
+
+    li {
+        margin-bottom: 10px; /* Adjust as needed */
+    }
+    .wrapper {
+        margin-bottom: 20px;
+    }
+</style>

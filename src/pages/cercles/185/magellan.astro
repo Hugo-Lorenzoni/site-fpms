@@ -3,6 +3,7 @@ import Layout from "../../../layouts/Layout.astro";
 import { Image } from "@astrojs/image/components";
 
 const cercle = "Magellan";
+
 const description = [
   "Le Cercle Magellan est le Cercle informatique de la Faculté Polytechnique de Mons. Il est composé d'un groupe d'étudiants, appelés \"admins\". Cette fine équipe est passionnée par l'informatique et se regroupe régulièrement pour jouer aux jeux vidéo ou pour réaliser des projets de solutions informatiques, tels que des sites web ou de l'hébergement.",
   'Le Magellan est également chargé des réseaux Internet des Cités Houzeau et Franeau, et sert de "HelpDesk" pour ces cités étudiantes.',
@@ -10,6 +11,7 @@ const description = [
   "Le Cercle Magellan organise de plus le GAME, une LAN-Party de 48h où plus de 100 joueurs participent chaque année à plusieurs tournois de jeux vidéo.",
   "Si tu es intéressé par l'informatique, les jeux vidéos, ou juste que tu as soif d'apprendre, n'hésite pas à nous rejoindre au local 500 ou à contacter un membre du comité !",
 ];
+
 const presi = "Kevin Dubrule";
 const treso = "Hugo Lorenzoni";
 const secretaire = "Lucy Bogaert";
@@ -53,6 +55,7 @@ const currentPath = Astro.url.pathname.split("/");
 </Layout>
 
 <style>
+
   .image {
     margin-top: 1rem;
     width: 100%;
@@ -67,5 +70,17 @@ const currentPath = Astro.url.pathname.split("/");
   }
   .text {
     text-align: justify;
+    }
+  ul {
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    margin-bottom: 10px; /* Adjust as needed */
+  }
+  .wrapper {
+    margin-bottom: 20px;
+
   }
 </style>

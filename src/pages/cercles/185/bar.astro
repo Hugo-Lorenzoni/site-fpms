@@ -1,0 +1,68 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import { Image } from "@astrojs/image/components";
+import { h } from "astro";
+const cercle = "Le Bar Polytech";
+const description = `
+Le Bar Polytech qu’est-ce que c’est ? C’est un lieu convivial où tous les étudiants se retrouvent pour passer un bon moment entre amis, jouer au kicker, déguster de délicieuses bières ou des sodas à des prix démocratiques.Comme son nom l’indique, le Bar est géré et tenu par les Barmans, des étudiants Polytech qui y travaillent bénévolement afin de vous offrir le meilleur service possible tout en gardant le Bar propre et rangé.
+<br><br/> 
+Le plus grand avantage du Bar Polytech ? La meilleure bière de l’univers aka la Stella Artois y est servie au fût par les Barmans selon les neuf étapes traditionnelles pour la modique somme de 0,90€. 
+Outre cela, plusieurs bières spéciales telles que la Paix Dieu, la Tripel Karmeliet, la Chimay Bleue, la Leffe Blonde, la Duvel, la Saint-Feuillien, … <br/> 
+Ces bières sont disponibles toute l’année au prix de 1,30€ la 25cl et 1,50€ la 33cl. 
+Si l’alcool ne te convient pas, aucun problème, nous te proposons également toute la gamme Pepsi à seulement 0,60€ ainsi que la gamme Looza à 0,70€ et la gamme Lipton Ice Tea à 0,80€. 
+Le Bar possède également deux kickers, un jeu de fléchettes et des jeux de cartes à disposition gratuitement.
+<br><br/>
+Où trouver ce paradis sur Terre ? Le Bar Polytech est situé au 69 Boulevard Dolez, dans la Cité Houzeau à droite lorsque vous descendez l’escalier et est ouvert à tous les étudiants. 
+N’hésite donc plus et viens boire un Looza !
+
+`;
+
+const presi = "Ugo Falcinelli";
+const treso = "Bruno Delhaye";
+const secretaire = "Bastien Francotte";
+---
+
+<Layout title={cercle}>
+    <main class="wrapper">
+        <h1>{cercle}</h1>
+        <section>
+            <h2>Description</h2>
+            <p>
+                <div set:html={description} />
+            </p>
+        </section>
+        <section>
+            <h2>Comité</h2>
+            <ul>
+                <li>{presi}</li>
+                <li>{treso}</li>
+                <li>{secretaire}</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Réseaux sociaux</h2>
+            <ul>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+            </ul>
+        </section>
+        <a
+            class="fblink"
+            target="_blank"
+            href="https://www.facebook.com/groups/14030439484/ ">Facebook</a
+        >
+    </main>
+</Layout>
+<style>
+    ul {
+        padding: 0;
+        list-style: none;
+    }
+
+    li {
+        margin-bottom: 10px; /* Adjust as needed */
+    }
+    .wrapper {
+        margin-bottom: 20px;
+    }
+</style>
