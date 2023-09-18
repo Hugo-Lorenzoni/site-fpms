@@ -1,0 +1,61 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import { Image } from "@astrojs/image/components";
+const cercle = "Le Cercle des Fêtes";
+const description = `
+
+Le Cercle des Fêtes est composé de trois étudiants élus en toute démocratie par les baptisés. Ils forment, avec les cinq membres de la Fédérale, les huit Togés. Comme leur nom l'indique, ils sont chargés de l'organisation des différentes activités, tant récréatives que folkloriques de notre bonne vieille Faculté. Ces festivités sont étroitement coordonnées avec l'ensemble des Cercles Fédérés, des Régionales et de la Fédérale. Les Fêtes organisent l'ensemble des activités de la Bleusaille, chaque Cercle apportant, bien sûr, une pierre à l'édifice ! Cette Bleusaille, entre autres, a pour but de te familiariser avec le côté folklorique de la vie estudiantine et t’ouvre la porte à toutes les activités que les Fêtes organisent telles que : 
+<br></br>
+• Le « Crasino » : C’est une soirée « années 20 » où les tickets boissons sont des jetons de casino que tu peux parier dans de nombreux jeux (roulette, poker, black jack, …) ; 
+<br></br>
+• Des méchouis : On se rassemble tous dans un champ près de la Faculté où l’on fait de grands feux dans le but de faire un grand barbecue ; 
+<br></br>
+• La Saint-Nicolas : Tous les étudiants baptisés de la ville de Mons se retrouvent pour un cortège inoubliable au sein de la ville. 
+<br></br>
+• Plein de guindailles, forfaitaires, à thème ou non, … Toutes les activités des Fêtes seront gratuites durant ta première année et cela, pour te remercier de t’être fait baptiser au sein de notre Faculté. Fort de ses 185 années d’expérience, le Cercle des Fêtes fera tout pour te faire vivre ce si beau folklore estudiantin montois et t’aidera à t’épanouir au sein de ta nouvelle Faculté. Les quatre Régionales (Carolo, Frontalière, Centrale, Boraine) sont sous l'égide des Fêtes. Selon ta région d’origine, tu seras orienté, dès le premier jour de Bleusaille, vers une de ces quatre Régionales. Chaque Régionale te fera découvrir ses spécialités locales : folklore, chants, bières spéciales, … Mais laissons-les plutôt se présenter en temps voulu... 
+<br></br>
+Nous t’invitons à lire la partie réservée à la Bleusaille. Nous tenons également à insister sur le fait que les activités de Bleusaille et Baptême sont régies selon une charte co-signée par les Cercles et les autorités de l’UMONS. Il sera possible pour toi de la consulter lors de la soirée de rentrée (spécialement organisée pour toi, nouveau BA1 Polytech) dimanche 17/09 et/ou lors de la Fête de la Rentrée de l’ORE à la Plaine de Nimy lundi 18/09.  Si tu as des questions, n’hésite surtout pas à contacter l’un des membres de notre comité : 
+<br></br>
+• Président : Vandenhende Maxime (0492/76.56.91) 
+<br></br>
+• Trésorier: Huart Colin (0471/08.28.63) 
+<br></br>
+• Secrétaire : Blondel Charlotte (0471/65.59.83)
+<br></br>
+En espérant t’avoir convaincu d’essayer cette superbe et enrichissante aventure qu’est la Bleusaille ! 
+
+
+
+`;
+
+
+
+--- 
+
+<Layout title={cercle}>
+    <main class="wrapper">
+        <h1>{cercle}</h1>
+        <section>
+            <h2>Description</h2>
+            <p>
+                <div set:html={description} />
+            </p>
+        </section>
+
+       
+        <!--<a href="">Anciens comités</a>-->
+    </main>
+</Layout>
+<style>
+    ul {
+        padding: 0;
+        list-style: none;
+    }
+
+    li {
+        margin-bottom: 10px; /* Adjust as needed */
+    }
+    .wrapper {
+        margin-bottom: 20px;
+    }
+</style>
