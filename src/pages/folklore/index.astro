@@ -1,0 +1,74 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Card from "../../components/CardFolklore.astro";
+
+const promo = 185;
+---
+
+<Layout title="Folklore">
+  <main class="wrapper">
+    <h1>Le Folklore Polytech</h1>
+    <section>
+      
+      <ul>
+        <Card title="La Bleusaille" promo={promo} hrefPage="bleusaille" customColor="#c70015" />
+        <Card
+          title="Le Cercle des Fêtes"
+          promo={promo}
+          hrefPage="fetes"
+          customColor="#fff"
+        />
+        <Card
+          title="Le Chant de la Fac"
+          promo={promo}
+          hrefPage="chantFac"
+          customColor="#42E1DD"
+        />
+      </ul>
+    </section>
+       <!---
+    <section>
+      <h2>Les Régionales</h2>
+      <ul>
+       <Card
+          title="La Carolo"
+          promo={promo}
+          hrefPage="carolo"
+          customColor="#000"
+        />
+        <Card
+          title="La Frontalière"
+          promo={promo}
+          hrefPage="fronta"
+          customColor="#7f00ff"
+        />
+        <Card
+          title="La Centrale"
+          promo={promo}
+          hrefPage="centrale"
+          customColor="#0000ff"
+        />
+        <Card
+          title="La Boraine"
+          promo={promo}
+          hrefPage="borain"
+          customColor="#ff0000"
+        />
+      -->
+        <li>Carolo</li>
+        <li>Frontalière</li>
+        <li>Centrale</li>
+        <li>Boraine</li>
+      </ul>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  ul {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+</style>
