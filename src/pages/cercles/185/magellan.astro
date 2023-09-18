@@ -1,20 +1,39 @@
 ---
 import Layout from "../../../layouts/Layout.astro";
+import { Image } from "@astrojs/image/components";
 
 const cercle = "Magellan";
-const description =
-  "Le cercle Magellan est le cercle informatique de la Faculté Polytechnique de Mons. Nous sommes en charge des réseaux internet des Cités Pierre Houzeau de Lehaie et Jacques Franeau. Nous disposons d'un local au sein de la Cité Houzeau (local 500) où nous mettons à diposition des PC en accès libre avec une session privée.";
+
+const description = [
+  "Le Cercle Magellan est le Cercle informatique de la Faculté Polytechnique de Mons. Il est composé d'un groupe d'étudiants, appelés \"admins\". Cette fine équipe est passionnée par l'informatique et se regroupe régulièrement pour jouer aux jeux vidéo ou pour réaliser des projets de solutions informatiques, tels que des sites web ou de l'hébergement.",
+  'Le Magellan est également chargé des réseaux Internet des Cités Houzeau et Franeau, et sert de "HelpDesk" pour ces cités étudiantes.',
+  "Nous disposons d'un local au sein de la Cité Houzeau (local 500) où nous mettons à disposition des PC en accès libre avec une session privée. Les PC disponibles sont très performants et permettent aussi bien de jouer à tes jeux préférés que de travailler sur des projets, le tout dans l'ambiance typique du Magellan.",
+  "Le Cercle Magellan organise de plus le GAME, une LAN-Party de 48h où plus de 100 joueurs participent chaque année à plusieurs tournois de jeux vidéo.",
+  "Si tu es intéressé par l'informatique, les jeux vidéos, ou juste que tu as soif d'apprendre, n'hésite pas à nous rejoindre au local 500 ou à contacter un membre du comité !",
+];
+
 const presi = "Kevin Dubrule";
 const treso = "Hugo Lorenzoni";
 const secretaire = "Lucy Bogaert";
+
+const currentPath = Astro.url.pathname.split("/");
 ---
 
 <Layout title={cercle}>
   <main class="wrapper">
+    <div class="image">
+      <Image
+        src={import(`../../../images/${currentPath[3]}.jpg`)}
+        alt={currentPath[3]}
+        quality={80}
+        aspectRatio={3 / 2}
+        format="webp"
+      />
+    </div>
     <h1>{cercle}</h1>
     <section>
       <h2>Description</h2>
-      <p>{description}</p>
+      <div>{description.map((p) => <p class="text">{p}</p>)}</div>
     </section>
     <section>
       <h2>Comité</h2>
@@ -46,5 +65,21 @@ const secretaire = "Lucy Bogaert";
   }
   .wrapper {
     margin-bottom: 20px;
+  }
+  .image {
+    margin-top: 1rem;
+    width: 100%;
+    height: 16rem;
+    overflow: hidden;
+    border-radius: 1rem;
+  }
+  .image img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  .text {
+    text-align: justify;
+
   }
 </style>
